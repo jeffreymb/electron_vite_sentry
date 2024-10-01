@@ -1,0 +1,14 @@
+{
+  "extends": "@electron-toolkit/tsconfig/tsconfig.web.json",
+  "include": ["src/renderer/**/*", "src/preload/*"],
+  "compilerOptions": {
+    "composite": true,
+    "baseUrl": "src",
+    "paths": {
+      "@abcsoftware/server.core/src/assets": ["../../src/assets"],
+      "@abcsoftware/server.core/lib/*": ["../../src/lib"]
+    },
+    "types": ["vite/client"],
+    "jsx": "react-jsx"
+  }
+}
