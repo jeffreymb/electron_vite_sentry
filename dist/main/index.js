@@ -15894,7 +15894,7 @@ function removeRedundantIntegrations(options) {
 }
 init({
   enabled: false,
-  dsn: "https://8dbf587ae692246c5e4e053c873addeb@sentry.abc.software/6",
+  dsn: process.env.SENTRY_DSN,
   transportOptions: {
     maxAgeDays: 15,
     maxQueueSize: 30,

@@ -1,9 +1,10 @@
 import { is } from '@electron-toolkit/utils';
 import icon from '../../build/icon.png?asset';
 import { app, BrowserWindow } from 'electron';
-
-import * as Sentry from '@sentry/electron/main';
 import {resolve} from "path";
+
+// Comment from here to line 17 to reproduce the issue.
+import * as Sentry from '@sentry/electron/main';
 
 Sentry.init({
   enabled: false,
